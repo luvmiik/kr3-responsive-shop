@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Онлайн-магазин книг Харуки Мураками. Коллекционные издания, новинки и бестселлеры.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Книги Харуки Мураками — онлайн-магазин">
+  <meta property="og:description" content="Каталог книг Харуки Мураками: романы, сборники рассказов, эссе.">
+  <meta property="og:image" content="images/murakami.jpg">
+  <title>Книги Харуки Мураками — Онлайн-магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+  <!-- ШАПКА -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">
+        <span class="site-header__logo-mark">HM</span>
+        <span class="site-header__logo-text">Мураками&nbsp;Книги</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <button
+          class="site-nav__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav-list"
+          aria-label="Открыть меню"
+        >
+          <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+          <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+          <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+        </button>
+        <ul class="site-nav__list" id="site-nav-list">
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--active" href="index.html" aria-current="page">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="product.html">Товар</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">Заявка</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Японская литература · Коллекция</p>
+        <h1 class="hero__title">Книги Харуки Мураками</h1>
+        <p class="hero__text">
+          «Если ты просыпаешься утром и не знаешь, куда идти, — просто иди.
+          Мир всё равно куда-нибудь тебя приведёт».
+        </p>
+        <a class="button button--primary" href="#popular">Перейти к книгам</a>
+      </div>
+
+      <div class="hero__portrait">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="images/hero-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="images/hero-tablet.jpg">
+          <img
+            class="hero__img"
+            src="images/hero-mobile.jpg"
+            alt="Харуки Мураками"
+            width="480"
+            height="270"
+          >
+        </picture>
+      </div>
+    </section>
+
+    <!-- ПРЕИМУЩЕСТВА -->
+    <section class="section" id="advantages" aria-labelledby="advantages-title">
+      <h2 class="section__title" id="advantages-title">Почему выбирают нас</h2>
+
+      <ul class="advantages-list">
+        <li class="advantages-list__item">
+          <span class="advantages-list__num">01</span>
+          <div>
+            <h3 class="advantages-list__title">Оригинальные издания</h3>
+            <p class="advantages-list__text">Только лицензионные переводы от «Азбуки» и «Эксмо».</p>
+          </div>
+        </li>
+        <li class="advantages-list__item">
+          <span class="advantages-list__num">02</span>
+          <div>
+            <h3 class="advantages-list__title">Быстрая доставка</h3>
+            <p class="advantages-list__text">Отправляем заказы в день оформления по всей России.</p>
+          </div>
+        </li>
+        <li class="advantages-list__item">
+          <span class="advantages-list__num">03</span>
+          <div>
+            <h3 class="advantages-list__title">Подарочная упаковка</h3>
+            <p class="advantages-list__text">Бесплатно для заказов от 3000 ₽.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- БЕСТСЕЛЛЕРЫ -->
+    <section class="section" id="popular" aria-labelledby="popular-title">
+      <h2 class="section__title" id="popular-title">Бестселлеры</h2>
+
+      <div class="products-grid">
+        <article class="product-card product-card--featured">
+          <div class="product-card__cover">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/norwegian-wood-480.webp 480w,
+                        images/norwegian-wood-640.webp 640w,
+                        images/norwegian-wood-960.webp 960w"
+                sizes="(max-width: 639px) 40vw, (max-width: 1023px) 50vw, 200px">
+              <img
+                src="images/norwegian-wood-640.jpg"
+                srcset="images/norwegian-wood-480.jpg 480w,
+                        images/norwegian-wood-640.jpg 640w,
+                        images/norwegian-wood-960.jpg 960w"
+                sizes="(max-width: 639px) 40vw, (max-width: 1023px) 50vw, 200px"
+                alt="Обложка романа «Норвежский лес»"
+                width="640" height="979"
+                loading="lazy">
+            </picture>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Норвежский лес</h3>
+            <p class="product-card__description">Роман о любви, утрате и взрослении в Токио 1960-х.</p>
+            <p class="product-card__price">890 ₽</p>
+            <button class="button button--primary product-card__button" type="button" data-product="Норвежский лес">Заказать</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__cover">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/kafka-480.webp 480w,
+                        images/kafka-640.webp 640w"
+                sizes="(max-width: 639px) 40vw, (max-width: 1023px) 50vw, 200px">
+              <img
+                src="images/kafka-640.jpg"
+                srcset="images/kafka-480.jpg 480w,
+                        images/kafka-640.jpg 640w"
+                sizes="(max-width: 639px) 40vw, (max-width: 1023px) 50vw, 200px"
+                alt="Обложка романа «Кафка на пляже»"
+                width="640" height="1011"
+                loading="lazy">
+            </picture>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Кафка на пляже</h3>
+            <p class="product-card__description">Магический реализм, пророчества и говорящие коты.</p>
+            <p class="product-card__price">1 090 ₽</p>
+            <button class="button button--primary product-card__button" type="button" data-product="Кафка на пляже">Заказать</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__cover">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/1q84-480.webp 480w,
+                        images/1q84-640.webp 640w"
+                sizes="(max-width: 639px) 40vw, (max-width: 1023px) 50vw, 200px">
+              <img
+                src="images/1q84-640.jpg"
+                srcset="images/1q84-480.jpg 480w,
+                        images/1q84-640.jpg 640w"
+                sizes="(max-width: 639px) 40vw, (max-width: 1023px) 50vw, 200px"
+                alt="Обложка трилогии «1Q84»"
+                width="640" height="1036"
+                loading="lazy">
+            </picture>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">1Q84. Трилогия</h3>
+            <p class="product-card__description">Альтернативная реальность, две луны и музыка Яначека.</p>
+            <p class="product-card__price">2 400 ₽</p>
+            <button class="button button--primary product-card__button" type="button" data-product="1Q84. Трилогия">Заказать</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ОБ АВТОРЕ -->
+    <aside class="aside-info" aria-labelledby="aside-info-title">
+      <div class="aside-info__content">
+        <h2 class="aside-info__title" id="aside-info-title">О Харуки Мураками</h2>
+        <p class="aside-info__text">
+          Харуки Мураками — один из самых читаемых современных писателей мира.
+          Его книги переведены на 50+ языков, а тиражи превышают десятки миллионов
+          экземпляров. В нашем магазине собраны все ключевые произведения автора —
+          от дебютного «Слушай песню ветра» до последних романов.
+        </p>
+      </div>
+      <div class="aside-info__portrait">
+        <img
+          class="aside-info__img"
+          src="images/haruki-350.jpg"
+          srcset="images/haruki-350.jpg 350w"
+          sizes="(max-width: 767px) 100vw, 300px"
+          alt="Портрет Харуки Мураками"
+          width="350" height="497"
+          loading="lazy">
+      </div>
+    </aside>
+  </main>
+
+  <!-- ФУТЕР -->
+  <footer id="contacts" class="site-footer">
+    <div class="site-footer__inner">
+      <p>&copy; 2026 Мураками Книги. Учебный проект.</p>
+      <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+    </div>
+  </footer>
+
+  <!-- МОДАЛЬНОЕ ОКНО -->
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+
+    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+      <input type="hidden" id="selected-product" name="product" value="">
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-name">Имя</label>
+        <input
+          class="order-form__input"
+          id="order-name"
+          name="name"
+          type="text"
+          autocomplete="name"
+          required
+        >
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-email">E-mail</label>
+        <input
+          class="order-form__input"
+          id="order-email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          required
+        >
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-comment">Комментарий</label>
+        <textarea
+          class="order-form__textarea"
+          id="order-comment"
+          name="comment"
+          rows="4"
+          placeholder="Пожелания к заказу, подарочная упаковка, детали доставки…"
+        ></textarea>
+      </div>
+
+      <div class="order-form__field order-form__field--checkbox">
+        <label class="order-form__checkbox">
+          <input
+            class="order-form__checkbox-input"
+            id="order-consent"
+            name="consent"
+            type="checkbox"
+            required
+          >
+          <span class="order-form__checkbox-text">
+            Я согласен(на) на обработку персональных данных
+              и подтверждаю, что ознакомлен(а) с
+              <a href="#" class="order-form__link">политикой конфиденциальности</a>.
+          </span>
+        </label>
+      </div>
+
+      <div class="order-form__actions">
+        <button class="button button--primary" type="submit">Отправить заявку</button>
+
+        <button class="button button--secondary" type="button">Закрыть</button>
+      </div>
+    </form>
+  </dialog>
+
+  <p class="success-message" id="success-message" hidden role="status">
+    Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.
+  </p>
+
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог книг Харуки Мураками.">
+  <title>Каталог книг — Мураками Книги</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">
+        <span class="site-header__logo-mark">HM</span>
+        <span class="site-header__logo-text">Мураками&nbsp;Книги</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <button
+          class="site-nav__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav-list"
+          aria-label="Открыть меню"
+        >
+          <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+          <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+          <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+        </button>
+        <ul class="site-nav__list" id="site-nav-list">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="product.html">Товар</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">Заявка</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__current">Каталог</span>
+    </nav>
+
+    <section class="section">
+      <h1 class="section__title">Каталог книг Харуки Мураками</h1>
+      <p class="section__lead">
+        Полное собрание произведений: романы, сборники рассказов, эссе и публицистика.
+      </p>
+    </section>
+
+    <section class="catalog-layout">
+
+      <aside class="catalog-filters" aria-labelledby="filters-title">
+        <h2 class="catalog-filters__title" id="filters-title">Фильтры</h2>
+
+        <form class="filters-form" action="#" method="get">
+          <fieldset class="filters-form__group">
+            <legend class="filters-form__legend">Жанр</legend>
+
+            <label>
+              <input type="checkbox" name="genre" value="novel">
+              Романы
+            </label>
+
+            <label>
+              <input type="checkbox" name="genre" value="stories">
+              Рассказы
+            </label>
+
+            <label>
+              <input type="checkbox" name="genre" value="essay">
+              Эссе
+            </label>
+          </fieldset>
+
+          <fieldset class="filters-form__group">
+            <legend class="filters-form__legend">Цена, ₽</legend>
+            <label for="price-from">От</label>
+            <input id="price-from" name="price-from" type="number" min="0" placeholder="0">
+            <label for="price-to">До</label>
+            <input id="price-to" name="price-to" type="number" min="0" placeholder="5000">
+          </fieldset>
+
+          <button class="button button--primary" type="submit">Применить</button>
+        </form>
+      </aside>
+
+      <section class="catalog-products" aria-labelledby="all-books-title">
+        <h2 class="catalog-products__title" id="all-books-title">Все книги</h2>
+
+        <div class="products-grid">
+
+          <article class="product-card product-card--featured">
+            <div class="product-card__cover">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="images/norwegian-wood-480.webp 480w,
+                          images/norwegian-wood-640.webp 640w,
+                          images/norwegian-wood-960.webp 960w"
+                  sizes="(max-width: 639px) 40vw, (max-width: 1023px) 50vw, 200px">
+                <img
+                  src="images/norwegian-wood-640.jpg"
+                  srcset="images/norwegian-wood-480.jpg 480w,
+                          images/norwegian-wood-640.jpg 640w,
+                          images/norwegian-wood-960.jpg 960w"
+                  sizes="(max-width: 639px) 40vw, (max-width: 1023px) 50vw, 200px"
+                  alt="Обложка романа «Норвежский лес»"
+                  width="640" height="979"
+                  loading="lazy">
+              </picture>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title"><a class="product-card__link" href="product.html">Норвежский лес</a></h3>
+              <p class="product-card__description">Роман, 1987</p>
+              <p class="product-card__price">890 ₽</p>
+              <button class="button button--primary product-card__button" type="button" data-product="Норвежский лес">Заказать</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__cover">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="images/kafka-480.webp 480w,
+                          images/kafka-640.webp 640w"
+                  sizes="(max-width: 639px) 40vw, (max-width: 1023px) 50vw, 200px">
+                <img
+                  src="images/kafka-640.jpg"
+                  srcset="images/kafka-480.jpg 480w,
+                          images/kafka-640.jpg 640w"
+                  sizes="(max-width: 639px) 40vw, (max-width: 1023px) 50vw, 200px"
+                  alt="Обложка романа «Кафка на пляже»"
+                  width="640" height="1011"
+                  loading="lazy">
+              </picture>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title"><a class="product-card__link" href="product.html">Кафка на пляже</a></h3>
+              <p class="product-card__description">Роман, 2002</p>
+              <p class="product-card__price">1 090 ₽</p>
+              <button class="button button--primary product-card__button" type="button" data-product="Кафка на пляже">Заказать</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__cover">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="images/1q84-480.webp 480w,
+                          images/1q84-640.webp 640w"
+                  sizes="(max-width: 639px) 40vw, (max-width: 1023px) 50vw, 200px">
+                <img
+                  src="images/1q84-640.jpg"
+                  srcset="images/1q84-480.jpg 480w,
+                          images/1q84-640.jpg 640w"
+                  sizes="(max-width: 639px) 40vw, (max-width: 1023px) 50vw, 200px"
+                  alt="Обложка трилогии «1Q84»"
+                  width="640" height="1036"
+                  loading="lazy">
+              </picture>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title"><a class="product-card__link" href="product.html">1Q84. Трилогия</a></h3>
+              <p class="product-card__description">Роман, 2009–2010</p>
+              <p class="product-card__price">2 400 ₽</p>
+              <button class="button button--primary product-card__button" type="button" data-product="1Q84. Трилогия">Заказать</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__cover">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="images/windup-480.webp 480w,
+                          images/windup-640.webp 640w"
+                  sizes="(max-width: 639px) 40vw, (max-width: 1023px) 50vw, 200px">
+                <img
+                  src="images/windup-640.jpg"
+                  srcset="images/windup-480.jpg 480w,
+                          images/windup-640.jpg 640w"
+                  sizes="(max-width: 639px) 40vw, (max-width: 1023px) 50vw, 200px"
+                  alt="Обложка романа «Хроники Заводной Птицы»"
+                  width="640" height="955"
+                  loading="lazy">
+              </picture>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title"><a class="product-card__link" href="product.html">Хроники Заводной Птицы</a></h3>
+              <p class="product-card__description">Роман, 1994</p>
+              <p class="product-card__price">1 250 ₽</p>
+              <button class="button button--primary product-card__button" type="button" data-product="Хроники Заводной Птицы">Заказать</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__cover">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="images/men-480.webp 480w,
+                          images/men-640.webp 640w,
+                          images/men-960.webp 960w"
+                  sizes="(max-width: 639px) 40vw, (max-width: 1023px) 50vw, 200px">
+                <img
+                  src="images/men-640.jpg"
+                  srcset="images/men-480.jpg 480w,
+                          images/men-640.jpg 640w,
+                          images/men-960.jpg 960w"
+                  sizes="(max-width: 639px) 40vw, (max-width: 1023px) 50vw, 200px"
+                  alt="Обложка сборника рассказов «Мужчины без женщин»"
+                  width="640" height="1034"
+                  loading="lazy">
+              </picture>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title"><a class="product-card__link" href="product.html">Мужчины без женщин</a></h3>
+              <p class="product-card__description">Сборник рассказов, 2014</p>
+              <p class="product-card__price">740 ₽</p>
+              <button class="button button--primary product-card__button" type="button" data-product="Мужчины без женщин">Заказать</button>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>&copy; 2026 Мураками Книги. Учебный проект.</p>
+    </div>
+  </footer>
+
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+
+    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+      <input type="hidden" id="selected-product" name="product" value="">
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-name">Имя</label>
+        <input
+          class="order-form__input"
+          id="order-name"
+          name="name"
+          type="text"
+          autocomplete="name"
+          required
+        >
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-email">E-mail</label>
+        <input
+          class="order-form__input"
+          id="order-email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          required
+        >
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-comment">Комментарий</label>
+        <textarea
+          class="order-form__textarea"
+          id="order-comment"
+          name="comment"
+          rows="4"
+          placeholder="Пожелания к заказу, подарочная упаковка, детали доставки…"
+        ></textarea>
+      </div>
+
+      <div class="order-form__field order-form__field--checkbox">
+        <label class="order-form__checkbox">
+          <input
+            class="order-form__checkbox-input"
+            id="order-consent"
+            name="consent"
+            type="checkbox"
+            required
+          >
+          <span class="order-form__checkbox-text">
+            Я согласен(на) на обработку персональных данных
+              и подтверждаю, что ознакомлен(а) с
+              <a href="#" class="order-form__link">политикой конфиденциальности</a>.
+          </span>
+        </label>
+      </div>
+
+      <div class="order-form__actions">
+        <button class="button button--primary" type="submit">Отправить заявку</button>
+
+        <button class="button button--secondary" type="button">Закрыть</button>
+      </div>
+    </form>
+  </dialog>
+
+  <p class="success-message" id="success-message" hidden role="status">
+    Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.
+  </p>
+
+</body>
+</html>
