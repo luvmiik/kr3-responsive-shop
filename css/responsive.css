@@ -1,33 +1,13 @@
-/* =====================================================
-   Адаптивные стили для контрольной работы №3.
-
-   Подход: DESKTOP FIRST.
-
-   Базовые стили (css/style.css) написаны для широкого
-   экрана. В этом файле интерфейс постепенно упрощается
-   для планшетов и телефонов через медиазапросы
-   с max-width: чем меньше экран, тем больше правил
-   переопределяется.
-
-   Контрольные ширины: 1440px, 1024px, 768px,
-   430px, 360px.
-   ===================================================== */
-
-/* ----------
-   Планшет и небольшой desktop (<= 1024px)
-   ---------- */
 @media (max-width: 1024px) {
 
   .hero {
     padding-top: var(--space-lg);
   }
 
-  /* Сетка карточек: 3 -> 2 колонки */
   .products-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  /* Каталог: фильтр уходит наверх, товары вниз */
   .catalog-layout {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -39,7 +19,6 @@
     position: static;
   }
 
-  /* Страница товара: колонки в столбец */
   .product-layout {
     grid-template-columns: 1fr;
   }
@@ -50,12 +29,8 @@
   }
 }
 
-/* ----------
-   Планшет (<= 768px)
-   ---------- */
 @media (max-width: 768px) {
 
-  /* Форма заявки: одна колонка */
   .page-form {
     grid-template-columns: 1fr;
   }
@@ -64,7 +39,6 @@
     grid-column: auto;
   }
 
-  /* Hero: одна колонка */
   .hero {
     grid-template-columns: 1fr;
   }
@@ -77,12 +51,10 @@
     max-width: 480px;
   }
 
-  /* Преимущества: одна колонка */
   .advantages-list {
     grid-template-columns: 1fr;
   }
 
-  /* Блок об авторе: столбец */
   .aside-info {
     flex-direction: column;
     align-items: center;
@@ -92,24 +64,18 @@
     justify-content: center;
   }
 
-  /* Контакты: подписи над значениями */
   .contact-list__item {
     grid-template-columns: 1fr;
   }
 
-  /* Кнопки формы во всю ширину */
   .order-form__actions .button {
     flex: 1 1 100%;
     text-align: center;
   }
 }
 
-/* ----------
-   Крупный мобильный (<= 640px)
-   ---------- */
 @media (max-width: 640px) {
 
-  /* Шапка: логотип слева, кнопка меню справа */
   .site-header__inner {
     flex-direction: row;
     align-items: center;
@@ -117,7 +83,6 @@
     gap: var(--space-md);
   }
 
-  /* Показываем кнопку меню, список скрыт */
   .site-nav__toggle {
     display: flex;
   }
@@ -136,7 +101,6 @@
     box-shadow: 0 12px 24px rgba(0,0,0,.12);
   }
 
-  /* Открытое меню */
   .site-nav--open .site-nav__list {
     display: flex;
     animation: nav-dropdown .2s ease;
@@ -158,12 +122,10 @@
     }
   }
 
-  /* Сетка карточек: одна колонка */
   .products-grid {
     grid-template-columns: 1fr;
   }
 
-  /* Таблица характеристик превращается в карточки */
   .table-wrapper {
     overflow-x: visible;
   }
@@ -217,7 +179,6 @@
     content: attr(data-label);
   }
 
-  /* Карточки каталога: обложка слева, текст справа */
   .product-card {
     flex-direction: row;
     flex-wrap: wrap;
@@ -245,12 +206,8 @@
   }
 }
 
-/* ----------
-   Небольшой мобильный (<= 430px)
-   ---------- */
 @media (max-width: 430px) {
 
-  /* Меньше боковые отступы */
   .section,
   .hero,
   .breadcrumbs,
@@ -266,7 +223,6 @@
     padding-right: var(--space-md);
   }
 
-  /* Карточки каталога снова в столбец */
   .product-card {
     flex-direction: column;
     flex-wrap: nowrap;
@@ -281,7 +237,6 @@
     flex: 0 1 auto;
   }
 
-  /* Радиокнопки доставки в столбец */
   .radio-group {
     flex-direction: column;
     gap: var(--space-sm);
